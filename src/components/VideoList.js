@@ -3,7 +3,7 @@ import { YOU_TUBE_API } from '../Utils/constant'
 import VideoCard from './VideoCard'
 
 const VideoList = () => {
-    const [videos,setVideos] = useState([]);
+    const [videos,setVideos] = useState(null);
     useEffect(()=>{
         //api call
         getVideoData();
@@ -13,9 +13,7 @@ const VideoList = () => {
         const json = await data.json();
         setVideos(json?.items);
     };
-    if(videos?.length===0)
-      return null;
-
+    if(!videos) return null; 
   return (
     <div className='flex flex-wrap ml-10 pl-10'>
         {videos.map(video=>{
