@@ -21,6 +21,7 @@ const LiveChatContainer = () => {
         return ()=>{
             clearInterval(inter);
         }
+         // eslint-disable-next-line
     },[]);
   return (
     <div className='h-[550px] border-2 ml-2 p-2 border-black bg-slate-100 rounded-lg overflow-y-scroll flex-col-reverse'>

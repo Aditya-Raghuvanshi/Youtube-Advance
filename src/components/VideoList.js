@@ -13,7 +13,7 @@ const VideoList = () => {
         const json = await data.json();
         setVideos(json?.items);
     };
-    if(videos.length===0)
+    if(videos?.length===0)
       return null;
 
   return (
